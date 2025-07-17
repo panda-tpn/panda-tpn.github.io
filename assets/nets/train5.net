@@ -1,0 +1,43 @@
+net {((.1 .2 .3 .4 .5).1 | .2 | .3)}
+tr {App.1.1|A1.2} : App {far.2}*5 {Far.1.1} -> {far.2}*4 {Coming.2} {Close.1.1} {in.2} 
+tr {App.1.1|A2.2} : App {far.2} {Far.1.1} {in.2} -> {Close.1.1} {in.2}*4 
+tr {App.2.1|A1.2} : App {far.2}*5 {Far.2.1} -> {far.2}*4 {Coming.2} {in.2} {Close.2.1} 
+tr {App.2.1|A2.2} : App {far.2} {in.2} {Far.2.1} -> {in.2}*4 {Close.2.1} 
+tr {App.3.1|A1.2} : App {far.2}*5 {Far.3.1} -> {far.2}*4 {Coming.2} {in.2} {Close.3.1} 
+tr {App.3.1|A2.2} : App {far.2} {in.2} {Far.3.1} -> {in.2}*4 {Close.3.1} 
+tr {App.4.1|A1.2} : App {far.2}*5 {Far.4.1} -> {far.2}*4 {Coming.2} {in.2} {Close.4.1} 
+tr {App.4.1|A2.2} : App {far.2} {in.2} {Far.4.1} -> {in.2}*4 {Close.4.1} 
+tr {App.5.1|A1.2} : App {far.2}*5 {Far.5.1} -> {far.2}*4 {Coming.2} {in.2} {Close.5.1} 
+tr {App.5.1|A2.2} : App {far.2} {in.2} {Far.5.1} -> {in.2}*4 {Close.5.1} 
+tr {D.2|D1.3} : Down [0,0] {Coming.2} {Up.3} -> {lowering.3} 
+tr {D.2|D2.3} : Down [0,0] {Coming.2} {raising.3} -> {lowering.3} 
+tr {Ex.1.1} [30,50] {On.1.1} -> {Left.1.1} 
+tr {Ex.2.1} [30,50] {On.2.1} -> {Left.2.1} 
+tr {Ex.3.1} [30,50] {On.3.1} -> {Left.3.1} 
+tr {Ex.4.1} [30,50] {On.4.1} -> {Left.4.1} 
+tr {Ex.5.1} [30,50] {On.5.1} -> {Left.5.1} 
+tr {Exit.1.1|E1.2} : Exit [0,0] {far.2}*4 {in.2} {Left.1.1} -> {far.2}*5 {Far.1.1} {Leaving.2} 
+tr {Exit.1.1|E2.2} : Exit [0,0] {in.2}*4 {Left.1.1} -> {far.2} {Far.1.1} {in.2} 
+tr {Exit.2.1|E1.2} : Exit [0,0] {far.2}*4 {in.2} {Left.2.1} -> {far.2}*5 {Far.2.1} {Leaving.2} 
+tr {Exit.2.1|E2.2} : Exit [0,0] {in.2}*4 {Left.2.1} -> {far.2} {in.2} {Far.2.1} 
+tr {Exit.3.1|E1.2} : Exit [0,0] {far.2}*4 {in.2} {Left.3.1} -> {far.2}*5 {Far.3.1} {Leaving.2} 
+tr {Exit.3.1|E2.2} : Exit [0,0] {in.2}*4 {Left.3.1} -> {far.2} {in.2} {Far.3.1} 
+tr {Exit.4.1|E1.2} : Exit [0,0] {far.2}*4 {in.2} {Left.4.1} -> {far.2}*5 {Far.4.1} {Leaving.2} 
+tr {Exit.4.1|E2.2} : Exit [0,0] {in.2}*4 {Left.4.1} -> {far.2} {in.2} {Far.4.1} 
+tr {Exit.5.1|E1.2} : Exit [0,0] {far.2}*4 {in.2} {Left.5.1} -> {far.2}*5 {Far.5.1} {Leaving.2} 
+tr {Exit.5.1|E2.2} : Exit [0,0] {in.2}*4 {Left.5.1} -> {far.2} {in.2} {Far.5.1} 
+tr {In.1.1} [20,30] {Close.1.1} -> {On.1.1} 
+tr {In.2.1} [20,30] {Close.2.1} -> {On.2.1} 
+tr {In.3.1} [20,30] {Close.3.1} -> {On.3.1} 
+tr {In.4.1} [20,30] {Close.4.1} -> {On.4.1} 
+tr {In.5.1} [20,30] {Close.5.1} -> {On.5.1} 
+tr {L.3} [5,10] {lowering.3} -> {Down.3} 
+tr {R.3} [5,10] {raising.3} -> {Up.3} 
+tr {U.2|U.3} : Up [0,0] {Down.3} {Leaving.2} -> {raising.3} 
+pl {Far.1.1} (1)
+pl {Far.2.1} (1)
+pl {Far.3.1} (1)
+pl {Far.4.1} (1)
+pl {Far.5.1} (1)
+pl {Up.3} (1)
+pl {far.2} (5)

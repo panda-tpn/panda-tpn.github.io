@@ -1,0 +1,9 @@
+net mj
+tr d7 [7,7] p1 -> 
+tr d8 [9,9] p2 -> 
+tr t1 p3 -> p4 
+tr t2 [1,w[ p4 -> p5 
+tr t3 [1,w[ p5 -> 
+pl p1 (1)
+pl p2 (1)
+pl p3 (1)

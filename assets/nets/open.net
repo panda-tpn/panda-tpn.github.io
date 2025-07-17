@@ -1,0 +1,5 @@
+net open
+
+pl p1 (2)
+tr t1 : a ]1,2] p1 ->
+

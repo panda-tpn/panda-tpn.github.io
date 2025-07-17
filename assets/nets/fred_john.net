@@ -1,0 +1,26 @@
+net fred_john
+
+pl john_at_home (1)
+pl fred_at_home (1)
+pl {0:00_8:00} (1)
+pl {00_7:10} (1)
+
+tr dJ [0,w[ john_at_home -> john_left_home
+tr jcar [30,40] jincar -> john_arrives_at_work
+tr jbus [60,w[ jinbus -> john_arrives_at_work
+tr dF [0,w[ fred_at_home -> {0_10} fred_left_home
+tr fcar [20,30] fincar -> fred_arrives_at_work
+tr fpool [40,50] fincpool -> fred_arrives_at_work
+tr h480 [480,480] {0:00_8:00} -> {8:00_8:10}
+tr ten_AfterDF [10,10] {0_10} -> {10_20_later}
+tr twenty_AfterDF [10,10] {10_20_later} ->
+tr j_TC [0,0] john_left_home -> jincar
+tr j_TB [0,0] john_left_home -> jinbus
+tr f_TCp [0,0] fred_left_home -> fincpool
+tr f_TC [0,0] fred_left_home -> fincar
+tr h490 [10,10] {8:00_8:10} ->
+tr f_IT [0,0] fred_arrives_at_work -> fred_working
+tr j_IT [0,0] john_arrives_at_work -> john_working
+tr h430 [430,430] {00_7:10} -> {07:10_07:20}
+tr h440 [10,10] {07:10_07:20} ->
+

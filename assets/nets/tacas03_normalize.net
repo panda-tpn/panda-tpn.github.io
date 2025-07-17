@@ -1,0 +1,6 @@
+net tacas03
+pl p0 (1)
+pl p1 (1)
+tr t0 [1,w[ p0 -> p0
+tr t1 p1 ->
+

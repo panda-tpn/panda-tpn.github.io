@@ -1,0 +1,8 @@
+net open2
+
+pl p1 (2)
+pl p2 (1)
+pl p3 (1)
+tr t1 : a [0,2[ p1 ->
+tr t2 : b [3,4[ p2 ->
+tr t3 : b [4,5] p3 ->

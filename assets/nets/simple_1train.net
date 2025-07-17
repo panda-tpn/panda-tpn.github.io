@@ -1,0 +1,9 @@
+tr in [4,5] Close -> On
+tr barrier_down : down [1,2] Open nbTrain?1 -> Closed
+tr barrier_up : up [1,2] Closed nbTrain?-1 -> Open
+tr Exit [2,4] nbTrain On -> Far
+tr Approach : app [1,w[ Far -> nbTrain Close
+pl Far (1)
+pl Open (1)
+net simple_1train
+

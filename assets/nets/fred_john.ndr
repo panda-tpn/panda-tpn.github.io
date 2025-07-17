@@ -1,0 +1,73 @@
+p 290.0 35.0 john_at_home 1 w
+p 690.0 35.0 fred_at_home 1 e
+t 290.0 95.0 dJ 0 w n
+p 290.0 155.0 john_left_home 0 w
+t 240.0 355.0 jcar 30 40 w
+t 340.0 355.0 jbus 60 w w
+t 690.0 95.0 dF 0 w n
+p 690.0 155.0 fred_left_home 0 e
+t 740.0 355.0 fcar 20 30 e
+t 640.0 355.0 fpool 40 50 e
+t 920.0 245.0 h480 480 480 w
+p 920.0 315.0 {8:00_8:10} 0 w
+p 460.0 175.0 0_10 0 n
+t 460.0 245.0 ten_AfterDF ne 10 10 e {} ne
+p 460.0 315.0 10_20_later 0 e
+t 460.0 385.0 twenty_AfterDF e 10 10 s {} ne
+p 920.0 175.0 {0:00_8:00} 1 n
+t 240.0 215.0 j_TC 0 0 w
+p 240.0 285.0 jincar 0 w
+p 340.0 285.0 jinbus 0 w
+t 340.0 215.0 j_TB 0 0 w
+p 740.0 285.0 fincar 0 e
+p 640.0 285.0 fincpool 0 e
+t 640.0 215.0 f_TCp 0 0 e
+t 740.0 215.0 f_TC 0 0 e
+t 920.0 385.0 h490 10 10 s
+p 690.0 415.0 fred_arrives_at_work 0 e
+p 290.0 415.0 john_arrives_at_work 0 w
+t 690.0 475.0 f_IT 0 0 e
+t 315.0 475.0 j_IT 0 0 e
+p 315.0 535.0 john_working 0 s
+t 100.0 100.0 h430 430 430 w
+p 100.0 170.0 {07:10_07:20} 0 w
+p 100.0 30.0 {00_7:10} 1 w
+t 100.0 240.0 h440 10 10 s
+p 690.0 550.0 fred_working 0 s
+e john_at_home dJ 1 n
+e dJ john_left_home 1 n
+e fred_at_home dF 1 n
+e dF fred_left_home 1 n
+e h480 {8:00_8:10} 1 n
+e dF 0_10 1 n
+e 0_10 ten_AfterDF 1 n
+e ten_AfterDF 10_20_later 1 n
+e 10_20_later twenty_AfterDF 1 n
+e {0:00_8:00} h480 1 n
+e john_left_home j_TC 1 n
+e j_TC jincar 1 n
+e jincar jcar 1 n
+e john_left_home j_TB 1 n
+e j_TB jinbus 1 n
+e jinbus jbus 1 n
+e fred_left_home f_TCp 1 n
+e f_TCp fincpool 1 n
+e fincpool fpool 1 n
+e fred_left_home f_TC 1 n
+e f_TC fincar 1 n
+e fincar fcar 1 n
+e {8:00_8:10} h490 1 n
+e jbus john_arrives_at_work 1 n
+e jcar john_arrives_at_work 1 n
+e fcar fred_arrives_at_work 1 n
+e fpool fred_arrives_at_work 1 n
+e fred_arrives_at_work f_IT 1 n
+e f_IT fred_working 1 n
+e john_arrives_at_work j_IT 1 n
+e j_IT john_working 1 n
+e {07:10_07:20} h440 1 n
+e {00_7:10} h430 1 n
+e h430 {07:10_07:20} 1 n
+h fred_john
+
+

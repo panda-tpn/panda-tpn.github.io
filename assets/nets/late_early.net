@@ -1,0 +1,15 @@
+net early_choice
+tr t0 [0,30] p0 -> p1 
+tr t1 [0,0] p1 -> p2 
+tr t10 [0,0] p5 -> 
+tr t2 [90,90] p2 -> p3 
+tr t3 [0,0] p3 q1 -> 
+tr t4 [25,25] p4 -> p5 
+tr t5 [0,0] p1 p5 -> p6 
+tr t6 [25,25] p6 -> p7 
+tr t7 [0,0] p7 q1 -> 
+tr t8 [0,50] q0 -> q1 
+tr t9 [0,0] q1 -> 
+pl p0 (1)
+pl p4 (1)
+pl q0 (1)

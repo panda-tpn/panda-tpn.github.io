@@ -1,0 +1,25 @@
+net videotracking
+tr t0 : SCHEDT1 [117,123] p0 -> p0 p2 
+tr t1 : T2 [51,57] p4 p6?1 -> 
+tr t10 [0,0] p6?-1 p8 -> 
+tr t11 : T3 [24,24] p9 -> p11 
+tr t13 : DISCARD [0,0] p11 p13?1 -> 
+tr t14 : WRITE [0,0] p11 p14 -> p13 
+tr t19 : DISPLAY [0,0] p13 p16 -> p14 
+tr t2 : T1 [84,84] p2 -> p4 
+tr t21 : SCHEDT4 [117,123] p5 -> p16 p5 
+tr t22 : EMPTY [0,0] p14?1 p16 -> 
+tr t3 : F p1 p11 -> 
+tr t4 : T2 [51,57] p4 p6?-1 -> p6 
+tr t7 : SCHEDT3 [39,41] p3 -> p3 p8 
+tr t8 [0,0] p6?1 p8 -> p9 
+pl p0 : id (1)
+pl p1 (1)
+pl p13 : bfull 
+pl p14 : bempty (1)
+pl p16 : s4 (1)
+pl p2 : s1 (1)
+pl p3 (1)
+pl p5 (1)
+pl p6 : register 
+pl p8 (1)

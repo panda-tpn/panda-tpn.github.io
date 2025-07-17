@@ -1,0 +1,65 @@
+t 290.0 130.0 t2 c 84 84 s T1 n
+p 375.0 130.0 p4 0 n
+t 985.0 50.0 t13 c 0 0 n DISCARD s
+t 985.0 215.0 t14 c 0 0 s WRITE n
+p 1135.0 50.0 p13 0 s bfull n
+p 1135.0 215.0 p14 1 n bempty s
+t 1290.0 215.0 t22 c 0 0 s EMPTY e
+p 1290.0 130.0 p16 1 n s4 w
+p 200.0 130.0 p2 1 n s1 s
+p 580.0 130.0 p8 1 nw
+t 580.0 50.0 t8 0 0 n
+t 1290.0 50.0 t19 c 0 0 n DISPLAY nw
+t 835.0 130.0 t11 c 24 24 n T3 s
+p 30.0 130.0 p0 1 n id s
+p 910.0 130.0 p11 0 e
+p 750.0 130.0 p9 0 s
+t 665.0 130.0 t7 c 39 41 s SCHEDT3 n
+t 375.0 50.0 t4 c 51 57 n T2 w
+t 375.0 215.0 t1 c 51 57 s T2 w
+p 475.0 130.0 p6 0 n register s
+t 1375.0 130.0 t21 c 117 123 s SCHEDT4 e
+t 580.0 215.0 t10 0 0 s
+p 1375.0 50.0 p5 1 e
+t 865.0 215.0 t3 c 0 w n FAULT s
+p 780.0 215.0 p1 1 s
+t 115.0 130.0 t0 c 117 123 s SCHEDT1 n
+p 665.0 215.0 p3 1 s
+e p0 t0 1 n
+e t0 p2 1 n
+e p2 t2 1 n
+e t2 p4 1 n
+e p4 t4 1 n
+e t4 p6 1 n
+e t7 p8 1 n
+e p6 t8 ?1 n
+e p8 t8 1 n
+e p8 t10 1 n
+e p6 t10 ?-1 n
+e t8 0.0 167.4401217 p9 0.2466879537 53.64426835 1 n
+e p9 t11 1 n
+e t11 p11 1 n
+e p11 0.754705901 37.75800073 t14 0.5038265023 41.31383671 1 n
+e t14 p13 1 n
+e p14 t14 1 n
+e p11 0.2452940998 37.75800071 t13 0.5000000002 45.7669666 1 n
+e p13 t13 ?1 n
+e t21 p16 1 n
+e p16 t19 1 n
+e p13 t19 1 n
+e t19 p14 1 n
+e p16 t22 1 n
+e p14 t22 ?1 n
+e p4 t1 1 n
+e p6 t1 ?1 n
+e t0 p0 1 n
+e p6 t4 ?-1 n
+e p1 t3 1 n
+e p11 t3 1 n
+e t7 p3 1 n
+e p3 t7 1 n
+e t21 p5 1 n
+e p5 t21 1 n
+h videotracking
+
+

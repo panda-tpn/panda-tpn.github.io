@@ -1,0 +1,7 @@
+net mickey
+tr t1 : a [2,w[ p1 -> 
+tr t2 : b [4,5] p2 -> 
+tr t3 [2,5] p3 -> 
+pl p1 (1)
+pl p2 (1)
+pl p3 (1)

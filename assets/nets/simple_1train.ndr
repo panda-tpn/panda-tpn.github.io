@@ -1,0 +1,28 @@
+p 185.0 175.0 Closed 0 s
+p 185.0 65.0 Open 1 n
+t 325.0 175.0 barrier_down s 1 2 c down n
+t 45.0 175.0 barrier_up s 1 2 c up n
+p 185.0 285.0 nbTrain 0 w
+t 480.0 285.0 Approach e 1 w c app n
+p 480.0 380.0 Close 0 e
+p 340.0 380.0 Far 1 n
+t 185.0 380.0 Exit w 2 4 c {} ne
+p 185.0 475.0 On 0 w
+t 340.0 475.0 in e 4 5 c {} ne
+e Far Approach 1 n
+e Approach Close 1 n
+e Approach nbTrain 1 n
+e On Exit 1 n
+e nbTrain Exit 1 n
+e Exit Far 1 n
+e Open barrier_down 1 n
+e nbTrain barrier_down ?1 n
+e barrier_down Closed 1 n
+e Closed barrier_up 1 n
+e barrier_up Open 1 n
+e Close in 1 n
+e in On 1 n
+e nbTrain barrier_up ?-1 n
+h simple_1train large
+
+

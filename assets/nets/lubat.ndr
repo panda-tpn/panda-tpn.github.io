@@ -1,0 +1,18 @@
+p 125.0 190.0 p0 0 s
+p 125.0 50.0 p1 1 n
+p 285.0 190.0 p2 0 s
+t 25.0 190.0 t3 c 1 2 s b n
+t 285.0 50.0 t1 c 3 5 n b e
+t 205.0 190.0 t4 c 0 w n f n
+t 125.0 120.0 t2 c 2 3 e a ne
+e t1 p1 1 n
+e p2 t1 1 n
+e t4 p2 1 n
+e p0 t4 1 n
+e t3 p1 1 n
+e p0 t3 1 n
+e t2 p0 1 n
+e p1 t2 1 n
+h lubat
+
+
