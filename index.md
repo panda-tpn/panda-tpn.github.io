@@ -24,9 +24,9 @@ Release 0.2.7 (July 2025), see the [Download page](/docs/download/).
 
 ## Usage
 
-By default, panda builds the linear State Class Graph (SCG) of a Time Petri net,
-according to the technique of Berthomieu/Menasche implemented in the tool
-[Tina](https://projects.laas.fr/tina/) (with option -W). The linear SCG is an
+By default, panda builds the strong State Class Graph (SCG) of a Time Petri net,
+according to the technique implemented in the tool
+[Tina](https://projects.laas.fr/tina/) (with option -S). The SSCG is an
 abstraction of the state space of the net that preserves reachable markings and
 traces, meaning the set of (untimed) execution sequences.
 
@@ -53,7 +53,7 @@ The main flags are:
     -v, --verbose int[=1]
         Textual output (use -v=2 for more info) (default none).
 
-State Class Graph flags:
+Build flags, to select the SCG construction:
 
     -S, --strong
         Generate the strong SCG, preserving states and LTL (default).

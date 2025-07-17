@@ -78,9 +78,9 @@ des(0,83,47)
 
 ## Building the Modified SCG
 
-To generate the MSCG we can use option --mscg (short form -M). Option --climit
-(equivalently -c) can be used to stop the exploration after a fixed number of
-classes.
+To generate the MSCG we can use option `--mscg` (short form `-M`). Option
+`--climit` (equivalently `-c`) can be used to stop the exploration after a fixed
+number of classes.
 
 For the MSCG, the statistics also include an extra pair of values. The first,
 called max persistence, is the longest sequence of transitions during which the
