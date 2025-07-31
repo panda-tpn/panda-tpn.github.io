@@ -2,7 +2,7 @@
 title: Home
 layout: home
 nav_order: 1
-last_modified_date: 2025-07-11
+last_modified_date: 2025-07-31
 ---
 
 # PåNĐA: time Petri Nets Diagnosability Analyzer
@@ -10,9 +10,11 @@ last_modified_date: 2025-07-11
 PaNDA is a formal verification tool for the state estimation, prognosis and
 diagnosability of time Petri nets (TPN).
 
+![Demo with charmbracelet VHS](/assets/img/demo.gif){:style="display:block; margin-left:auto margin-right:auto"}
+
 ## Downloads
 
-Release 0.2.7 (July 2025), see the [Download page](/docs/download/).  
+Release 0.3 (July 2025), see the [Download page](/docs/download/).  
 
 |---------|--------|
 | [panda_Darwin_arm64.tar.gz](/assets/releases/panda_Darwin_arm64.tar.gz)   | For macOS 13 (Ventura) or later, on Apple Silicon |
@@ -39,7 +41,7 @@ result on the standard output. We read the content of the file from the standard
 input when using the special file name `-`. Panda can handle Petri nets with read
 and inhibitor arcs but does not support priorities yet.
 
-The main flags are:
+The basic flags are:
 
     -h, --help
         Print usage information.
@@ -82,8 +84,8 @@ Stopping test and limit flags (mutually exclusive flags):
 Output format and options flags:
 
     -P, --plan
-        Generate inequation systems for traces matching a scenario or
-        a time horizon (only with -M and -R)
+        List traces matching a scenario or a time horizon (only with -M and -R). 
+        Add option -v to print the associated constraints systems.
 
     --aut int[=1]
        Output LTS in .aut format, as read by Aldebaran. Option --aut=2

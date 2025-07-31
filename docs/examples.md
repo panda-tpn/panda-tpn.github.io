@@ -2,7 +2,7 @@
 title: Examples
 layout: default
 nav_order: 3
-last_modified_date: 2025-07-15
+last_modified_date: 2025-07-31
 ---
 
 ## Default command
@@ -50,7 +50,7 @@ class 2
 0.000s
 ```
 
-## Output in the .aut, Aldebaran format
+## Output in the Aldebaran (.aut) format
 
 The following call generates the SCG in AUT format, using the labels of
 transitions instead of their names. Files in the AUT format can be displayed by
@@ -126,6 +126,80 @@ is compatible with the given sequence of events (or labels).
 
 ```console
 panda --scn=docs/scn/mutex.scn docs/nets/mutex.net
+```
+
+When using the Modified SCG (options `-M` or `-R`), it is possible to print the
+list of matching traces using the `--plan` (short `-P`) option. Together with
+the verbose output (option `-v`), the tool also prints the associated timing
+constraints for each trace.
+
+```console
+panda --scn=docs/scn/mutex.scn docs/nets/mutex.net -MPv
+```
+
+Output:
+
+```console
+reached state(s): 10, 11, 12, 13
+traces:
+  t1@1 t2 t4@5 t5 t6@6 $9   UNSAT
+  constraints:
+1 ≤ z1 ≤ 1
+0 ≤ z2
+1 ≤ z2 - z1 ≤ 3
+5 ≤ z3 ≤ 5
+0 ≤ z3 - z2 ≤ 3
+0 ≤ z4
+    z4 - z2 ≤ 4
+1 ≤ z4 - z3
+6 ≤ z5 ≤ 6
+    z5 - z2 ≤ 4
+0 ≤ z5 - z4 ≤ 3
+9 ≤ zc ≤ 9
+    zc - z2 ≤ 4
+0 ≤ zc - z5 ≤ 3
+  t1@1 t2 t3 t4@5 t5 t6@6 $9   SAT
+  feasible: [z1: 1, z2: 4, z3: 5, z4: 5, z5: 6, z6: 6, zc: 9]
+  constraints:
+1 ≤ z1 ≤ 1
+0 ≤ z2
+1 ≤ z2 - z1 ≤ 3
+0 ≤ z3
+
+[...]
+```
+
+## Computing classes reachable with a given time horizon
+
+Another possibility to limit the exploration of the state space is to specify a
+time horizon (option `--date=[int]`, or `-d` for short). This is only available
+when building the Modified SCG.
+
+```console
+panda -M docs/nets/simple_abp.net -d=3
+```
+
+It is possible to print the list of traces compatible with the given duration
+using the `--plan` (short `-P`) option. Together with the verbose output (option
+`-v`), the tool also prints the associated timing constraints for each trace.
+
+```console
+panda -M docs/nets/simple_abp.net -d=3 -P
+```
+
+Output:
+
+```console
+reached state(s): 1, 2, 3, 4, 5, 6
+traces:
+  t1
+  t1 t4
+  t1 t6
+  t1 t7
+  t1 t6 t8
+  t1 t7 t8
+9 classe(s), 5 marking(s), 6 dbm(s), 11 transition(s), 3 max. persistence
+0.000s
 ```
 
 ## Graphical Output
